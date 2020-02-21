@@ -1,5 +1,7 @@
+add_subdirectory(greetings)
+
 add_executable(cmake_sample main.cpp)
-if (GREETINGS_BUILD_SHARED_LIBS)
+if (BUILD_SHARED_LIBS)
     target_link_libraries(cmake_sample INTERFACE
         greetings
         )
@@ -8,4 +10,3 @@ else()
         greetings
         )
 endif()
-add_subdirectory(greetings)
